@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuestionnaireFromAnya.PageLevelTwo">
+    
+    <ContentPage.Resources>
+        <StyleSheetExtension Source = "ButtonsInAColumn.css"/>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Orientation="Vertical" Grid.Column="0" Grid.Row="0" TranslationY="100">
+
+                    <StackLayout>
+                        <Button StyleId="ButtonStaticTwo" Text="Просто кнопка" Clicked="Button_Clicked_5"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Button StyleId="ButtonHoverTwo" Text="Кнопка, которая ожидает" Clicked="Button_Clicked_4"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Button StyleId="ButtonPressedTwo" Text="Кнопка, которую замучили нажатия" Clicked="Button_Clicked_3"/>
+                    </StackLayout>
+
+                </StackLayout>
+
+
+
+                <StackLayout Orientation="Vertical" Grid.Column="1" Grid.Row="0" TranslationY="100">
+
+                    <StackLayout>
+                        <Button StyleId="ButtonStaticThree" Text="Тоже просто кнопка" Clicked="Button_Clicked_2"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Button StyleId="ButtonHoverThree" Text="Кнопка, которая тоже ожидает" Clicked="Button_Clicked_1"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Button StyleId="ButtonPressedThree" Text="Кнопка, которую тоже замучили нажатия" Clicked="Button_Clicked"/>
+                    </StackLayout>
+
+                </StackLayout>
+
+            </Grid>
+
+    </ContentPage.Content>
+
+</ContentPage>

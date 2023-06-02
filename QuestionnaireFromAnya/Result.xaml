@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuestionnaireFromAnya.Result">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Label Text="Моя Анкета:"/>
+            <Label x:Name="labelname"/>
+            <Label x:Name="labellike"/>
+            <Label x:Name="labelwork"/>
+            <Label x:Name="labelmood"/>
+            <Label x:Name="labelageot"/>
+            <Label x:Name="labelagedo"/>
+            <Slider x:Name="SlOne" Maximum="100" Minimum="0"  Value="40" ThumbColor="DeepPink" MaximumTrackColor="Gray" MinimumTrackColor="Black" PropertyChanged="Slider_PropertyChanged"/>
+            <Slider x:Name="SlTwo" Maximum="100" Minimum="0"  Value="60" ThumbColor="lightpink" MaximumTrackColor="Gray" MinimumTrackColor="Black" PropertyChanged="SlTwo_PropertyChanged"/>
+            <Slider x:Name="SlThree" Maximum="100" Minimum="0"  Value="25" ThumbColor="DeepPink" MaximumTrackColor="Gray" MinimumTrackColor="Black" PropertyChanged="SlThree_PropertyChanged"/>
+            <Switch x:Name="MyS" ThumbColor="Orange" PropertyChanged="Switch_PropertyChanged"/>
+            <Switch x:Name="MySwitch" ThumbColor="White" PropertyChanged="MySwitch_PropertyChanged"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

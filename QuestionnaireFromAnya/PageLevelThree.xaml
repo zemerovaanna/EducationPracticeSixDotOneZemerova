@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuestionnaireFromAnya.PageLevelThree">
+
+    <ContentPage.Resources>
+
+        <StyleSheet Source="LastStyle.css"/>
+
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+
+            <Button StyleId="button" Text="Посмотреть мою анкету" Clicked="Button_Clicked"/>
+            
+            <StackLayout>
+                <Label Text="Анкета от Ани!" Margin="15, 25, 0, 0"/>
+            </StackLayout>
+
+
+
+            <Label Text="Выберите специальность:"/>
+
+            <StackLayout Orientation="Horizontal">
+                <RadioButton x:Name="RadioButtonProgrammer" Content="Программист" Value="Programmer" FontSize="12" IsChecked="True"/>
+                <RadioButton x:Name="RadioButtonDesigner" Content="Дизайнер" Value="Designer" FontSize="12"/>
+                <RadioButton x:Name="RadioButtonBank" Content="Банковское дело" Value="Bank" FontSize="12"/>
+            </StackLayout>
+
+
+
+            <Label Text="Что из перечисленного нравится делать в колледже?"/>
+
+            <StackLayout Orientation="Horizontal">
+                <CheckBox x:Name="CheckBoxLearning" IsChecked="True"/>
+                <Label x:Name="LabelLearning" Text="Учиться" Margin="0,5,0,0"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <CheckBox x:Name="CheckBoxEating"/>
+                <Label x:Name="LabelEating" Text="Кушать в столовой" Margin="0,5,0,0"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <CheckBox x:Name="CheckBoxSocial"/>
+                <Label x:Name="LabelSocial" Text="Общаться" Margin="0,5,0,0"/>
+            </StackLayout>
+
+
+
+            <StackLayout Orientation="Vertical">
+                <Label Text="Насколько хорошее у вас настроение в колледже?"/>
+                <Slider x:Name="SliderMood" Maximum="100" Minimum="0"  Value="25" ThumbColor="White" MaximumTrackColor="Gray" MinimumTrackColor="DeepPink" ValueChanged="SliderMood_ValueChanged"/>
+                <Label x:Name="LabelProcentMood" Text="25%" Margin="150,0,0,0"/>
+            </StackLayout>
+
+            <Label Text="Возраст у ваших одногруппников в интервале:"/>
+
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Orientation="Vertical" Grid.Column="0" Grid.Row="0">
+
+                    <StackLayout>
+                        <Slider x:Name="SliderProcentOT" HorizontalOptions="Fill" Maximum="21" Minimum="16"  Value="18" ThumbColor="Black" MaximumTrackColor="DeepPink" MinimumTrackColor="White" TranslationX="-7" ValueChanged="SliderProcentOT_ValueChanged"/>
+                        <Label x:Name="LabelProcentOT" Text="от 25" Margin="15,0,0,0"/>
+                    </StackLayout>
+
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" Grid.Column="1" Grid.Row="0">
+
+                    <StackLayout>
+                        <Slider x:Name="SliderProcentDO" HorizontalOptions="Fill" Maximum="100" Minimum="22"  Value="30" ThumbColor="Black" MaximumTrackColor="White" MinimumTrackColor="DeepPink" TranslationX="-45" ValueChanged="SliderDo_ValueChanged"/>
+                        <Label x:Name="LabelProcentDO" Text="до 30" Margin="60,0,0,0"/>
+                    </StackLayout>
+                </StackLayout>
+
+            </Grid>
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>
